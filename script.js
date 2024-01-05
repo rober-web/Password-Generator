@@ -88,6 +88,7 @@ var upperCasedCharacters = [
   "Z",
 ];
 
+
 // Function to prompt user for password options
 const getPasswordOptions = () => {
   // Length of password
@@ -118,6 +119,17 @@ const getPasswordOptions = () => {
 
   // This alert will only be executed after the while loop breaks
   alert("Proceed to the next step");
+
+  //create function to show how many characters from the options are allowed according to the length chosen
+  const useOptions = (arg)=>{
+    arg = arg / 4 /* Based on lowercase, uppercase, numeric and special characters, which are four choices */;
+    return Math.floor(arg);
+  }
+
+  // create lowercase prompt
+  let lowerOption = prompt("LOWERCASE - Please, select at between 1 and " + useOptions(passLength)+ " character to be lower case." );
+
+
 };
 
 // Call the function to prompt the user for password options
