@@ -89,30 +89,45 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
-function getPasswordOptions() {
+const getPasswordOptions = () => {
+  //Length of password
+  let passLength = prompt('Enter the number of characters you want to generate for your password. It must be between 8 and 128 characters.');
+  //validate length of password
+  for(i = 0; i < passLength.length; i++) {
+    console.log(passLength[i]);
+  }
+/*   if(passLength.length < 8 || passLength.length > 128){
+    alert('Please, ensure your password length is between 8 and 128 characters.')
+  } */
+
 
 }
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+const getRandom = (arr) => {
 
 }
 
 // Function to generate password with user input
-function generatePassword() {
+const generatePassword = () => {
 
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+const writePassword = () => {
+  let password = generatePassword();
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+//start the code
+
+getPasswordOptions();
