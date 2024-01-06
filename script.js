@@ -174,15 +174,15 @@ const getPasswordOptions = () => {
   //create while loop to select specific numberOption characters
   while(true){
 
-    // create uppercase prompt
-     numberOption = prompt("UPPERCASE - Please, select between 1 and " + (useOptions(passLength) + (leftUpper))+ " character to be uppercase." );
+    // create number option prompt
+     numberOption = prompt("NUMBER OPTION - Please, select between 1 and " + (useOptions(passLength) + (leftUpper))+ " character to be number characters." );
     
     if (numberOption < 1 || numberOption > (useOptions(passLength) + (leftUpper)) ){
       alert("Please, select between 1 and " + (useOptions(passLength) + (leftUpper)));
-    }else if (isNaN(upperOption)){
+    }else if (isNaN(numberOption)){
       alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + (useOptions(passLength) + (leftUpper)));
     }else{
-      alert("you selected " + upperOption);
+      alert("you selected " + numberOption);
       break;
     }
 
@@ -191,6 +191,26 @@ const getPasswordOptions = () => {
   leftNumber = ((useOptions(passLength) + (leftUpper)) - numberOption);
 
   alert(leftNumber);
+  //create while loop to select specific special characters
+  while(true){
+
+    // create special character prompt
+     specialCharOption = prompt("SPECIAL CHARACTERS - Please, select between 1 and " + (useOptions(passLength) + (leftNumber))+ " character to be special characters." );
+    
+    if (specialCharOption < 1 || specialCharOption > (useOptions(passLength) + (leftNumber)) ){
+      alert("Please, select between 1 and " + (useOptions(passLength) + (leftNumber)));
+    }else if (isNaN(specialCharOption)){
+      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + (useOptions(passLength) + (leftNumber)));
+    }else{
+      alert("you selected " + specialCharOption);
+      break;
+    }
+
+  }   
+
+  leftSpecial = ((useOptions(passLength) + (leftNumber)) - specialCharOption);
+
+  alert(leftSpecial);
 
   
 
