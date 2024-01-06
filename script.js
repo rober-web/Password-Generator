@@ -87,7 +87,10 @@ var upperCasedCharacters = [
   "Y",
   "Z",
 ];
-
+let lowerOption;
+let leftLower;
+let upperOption;
+let leftUpper;
 
 // Function to prompt user for password options
 const getPasswordOptions = () => {
@@ -126,8 +129,48 @@ const getPasswordOptions = () => {
     return Math.floor(arg);
   }
 
-  // create lowercase prompt
-  let lowerOption = prompt("LOWERCASE - Please, select at between 1 and " + useOptions(passLength)+ " character to be lower case." );
+  //create while loop to select specific characters
+
+  while(true){
+    // create lowercase prompt
+   lowerOption = parseInt(prompt("LOWERCASE - Please, select between 1 and " + useOptions(passLength)+ " character to be lowercase." ));
+
+    if (lowerOption < 1 || lowerOption > useOptions(passLength) ){
+      alert("Please, select between 1 and " + useOptions(passLength));
+    }else if (isNaN(lowerOption)){
+      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + useOptions(passLength) );
+    }else{
+      alert("you selected " + lowerOption);
+      break;
+    }
+
+  }
+
+  leftLower = (useOptions(passLength) - lowerOption);
+
+  while(true){
+
+    // create uppercase prompt
+     upperOption = prompt("UPPERCASE - Please, select between 1 and " + (useOptions(passLength) + (leftLower))+ " character to be uppercase." );
+    
+    if (upperOption < 1 || upperOption > (useOptions(passLength) + (leftLower)) ){
+      alert("Please, select between 1 and " + (useOptions(passLength) + (leftLower)));
+    }else if (isNaN(upperOption)){
+      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + useOptions(passLength) );
+    }else{
+      alert("you selected " + upperOption);
+      break;
+    }
+
+  }   
+
+  leftUpper = ((useOptions(passLength) + (leftLower)) - upperOption);
+
+  alert(leftUpper);
+
+  
+
+
 
 
 };
