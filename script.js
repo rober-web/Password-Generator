@@ -91,6 +91,8 @@ let lowerOption;
 let leftLower;
 let upperOption;
 let leftUpper;
+let numberOption;
+let leftNumber;
 
 // Function to prompt user for password options
 const getPasswordOptions = () => {
@@ -148,6 +150,7 @@ const getPasswordOptions = () => {
 
   leftLower = (useOptions(passLength) - lowerOption);
 
+  //create while loop to select specific upperOption characters
   while(true){
 
     // create uppercase prompt
@@ -156,7 +159,7 @@ const getPasswordOptions = () => {
     if (upperOption < 1 || upperOption > (useOptions(passLength) + (leftLower)) ){
       alert("Please, select between 1 and " + (useOptions(passLength) + (leftLower)));
     }else if (isNaN(upperOption)){
-      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + useOptions(passLength) );
+      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + (useOptions(passLength) + (leftLower)) );
     }else{
       alert("you selected " + upperOption);
       break;
@@ -167,6 +170,27 @@ const getPasswordOptions = () => {
   leftUpper = ((useOptions(passLength) + (leftLower)) - upperOption);
 
   alert(leftUpper);
+
+  //create while loop to select specific numberOption characters
+  while(true){
+
+    // create uppercase prompt
+     numberOption = prompt("UPPERCASE - Please, select between 1 and " + (useOptions(passLength) + (leftUpper))+ " character to be uppercase." );
+    
+    if (numberOption < 1 || numberOption > (useOptions(passLength) + (leftUpper)) ){
+      alert("Please, select between 1 and " + (useOptions(passLength) + (leftUpper)));
+    }else if (isNaN(upperOption)){
+      alert("You inserted not a valid number, please make sure you insert numbers between 1 and " + (useOptions(passLength) + (leftUpper)));
+    }else{
+      alert("you selected " + upperOption);
+      break;
+    }
+
+  }   
+
+  leftNumber = ((useOptions(passLength) + (leftUpper)) - numberOption);
+
+  alert(leftNumber);
 
   
 
