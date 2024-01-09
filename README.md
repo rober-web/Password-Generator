@@ -11,6 +11,12 @@ This application provides an easy way for users to create secure and random pass
 - Validation for each input
 - Password generation based on user criteria
 
+## Features
+
+- [Fisher-Yates Algorithms](https://www.youtube.com/watch?v=tLxBwSL3lPQ&ab_channel=AdamKhoury)
+- [Toptal --> minifier](https://www.toptal.com/developers/javascript-minifier)
+
+
 ## Instructions
 
 1. Click the "Start" button to start the process.
