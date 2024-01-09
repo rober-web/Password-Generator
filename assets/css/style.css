@@ -1,0 +1,45 @@
+
+
+.centered-item{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    max-width:50%;
+   
+}
+
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+    /* Your styles here */
+    textarea{
+        min-width:100%;
+    }
+  }
+  
+  /* Small devices (tablets) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Your styles here */
+    textarea{
+        min-width:80%;
+    }
+  }
+  
+  /* Medium devices (desktops) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Your styles here */
+
+  }
+  
+  /* Large devices (large desktops) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your styles here */
+  }
+  
+  /* Extra large devices (extra-large desktops) */
+  @media (min-width: 1200px) {
+    /* Your styles here */
+  }
+  
